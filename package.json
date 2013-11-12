@@ -1,0 +1,20 @@
+{
+  "name": "apostrophe-ui-2",
+  "version": "0.1.0",
+  "description": "Styles required for the new editor and other pre-release improvements to A2's interface. Eventually this will merge into the apostrophe module.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/punkave/apostrophe-ui-2.git"
+  },
+  "keywords": [
+    "apostrophe",
+    "cms"
+  ],
+  "author": "P'unk Avenue LLC",
+  "license": "MIT",
+  "dependencies": {
+  }
+}
