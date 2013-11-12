@@ -16,5 +16,6 @@
   "author": "P'unk Avenue LLC",
   "license": "MIT",
   "dependencies": {
+    "extend": "~1.2.1"
   }
 }

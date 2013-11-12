@@ -1,3 +1,5 @@
+var extend = require('extend');
+
 module.exports = ui2;
 
 function ui2(options, callback) {
@@ -9,9 +11,12 @@ ui2.Ui2 = function(options, callback) {
   self._apos = options.apos;
   // Mix in the ability to serve assets and templates
   self._apos.mixinModuleAssets(self, 'ui-2', __dirname, options);
+
   self.pushAsset('stylesheet', 'editor', { when: 'user' });
   self.pushAsset('stylesheet', 'content', { when: 'always' });
-  console.log('set up');
+
+  self.serveAssets();
+
   return process.nextTick(function() {
     return callback(null);
   });

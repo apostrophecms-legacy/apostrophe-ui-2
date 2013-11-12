@@ -26,6 +26,36 @@
 @apos-grey-10: darken(@apos-grey,10%);
 @apos-grey-20: darken(@apos-grey,20%);
 
+.apos-bg-gradient {
+  /* fallback */
+  background-color: @apos-base;
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@apos-base), to(@apos-lighten-10));
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(top, @apos-base, @apos-lighten-10);
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(top, @apos-base, @apos-lighten-10);
+  /* IE 10 */
+  background: -ms-linear-gradient(top, @apos-base, @apos-lighten-10);
+}
+
+.clearfix
+{
+  zoom: 1;
+  &:after,
+  &:before
+  {
+    content: "\0020";
+    display: block;
+    height: 0;
+    visibility: hidden;
+  }
+  &:after
+  {
+    clear: both;
+  }
+}
+
 .apos-ui-container
 { 
   position: relative;
