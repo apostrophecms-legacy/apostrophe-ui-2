@@ -26,18 +26,29 @@
 @apos-grey-10: darken(@apos-grey,10%);
 @apos-grey-20: darken(@apos-grey,20%);
 
-.apos-bg-gradient {
-  /* fallback */
-  background-color: @apos-base;
-  /* Safari 4-5, Chrome 1-9 */
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@apos-base), to(@apos-lighten-10));
-  /* Safari 5.1, Chrome 10+ */
-  background: -webkit-linear-gradient(top, @apos-base, @apos-lighten-10);
-  /* Firefox 3.6+ */
-  background: -moz-linear-gradient(top, @apos-base, @apos-lighten-10);
-  /* IE 10 */
-  background: -ms-linear-gradient(top, @apos-base, @apos-lighten-10);
+.apos-admin-bar .apos-logo-tiny,
+.apos-control,
+.apos-modal h3 { background-color: @apos-base; }
+.apos-button:hover { background-color: @apos-shade-10; }
+.apos-modal .apos-modal-body form select { background-color: #fff; color: @apos-base; }
+
+.apos-transition(@property, @time, @ease)
+{
+  -webkit-transition: @property @time @ease;  
+  -moz-transition: @property @time @ease;  
+  transition: @property @time @ease;
 }
+
+.apos-bg-gradient(@from, @to) {
+  background-color: @from;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@from), to(@to));
+  background: -webkit-linear-gradient(top, @from, @to);
+  background: -moz-linear-gradient(top, @from, @to);
+  background: -ms-linear-gradient(top, @from, @to);
+  background-size: 100% 100px;
+}
+
+
 
 .clearfix
 {
@@ -67,6 +78,11 @@
           border-radius: 2px;
   -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
           box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+  
+  &:empty
+  {
+    display: none;
+  }
 
 
   &.left
@@ -111,7 +127,7 @@
   display: inline-block;
   min-width: 36px;
   line-height: 14px;
-  background: @apos-base;
+
   margin-right: 0px;
   
   text-shadow: 0.2em 0.1em rgba(0,0,0,0.2);
@@ -120,11 +136,22 @@
   text-align: center;
   cursor: pointer;
 
-  .apos-bg-gradient;
+  .apos-bg-gradient(@apos-base, @apos-lighten-10);
   
   border: 1px solid @apos-shade-5;
   border-radius: 3px;
   -webkit-border-radius: 3px;
+
+
+  &:hover
+  {
+    .apos-bg-gradient(@apos-shade-5, @apos-base);
+  }
+
+  &:active
+  {
+    .apos-bg-gradient(@apos-shade-10, @apos-base);
+  }
 }
 
 .apos-ui-btn-group
