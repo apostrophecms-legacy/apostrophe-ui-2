@@ -26,6 +26,11 @@
 @apos-grey-10: darken(@apos-grey,10%);
 @apos-grey-20: darken(@apos-grey,20%);
 
+.apos-editor2-item-separator
+{
+  height: 20px;
+}
+
 .apos-admin-bar .apos-logo-tiny,
 .apos-control,
 .apos-modal h3,
@@ -101,9 +106,13 @@
   }
 }
 
-.apos-ui-container:empty
+
+[data-text-only="true"]
 {
-  background: blue;
+  .apos-ui-container.apos-drag
+  {
+    display: none !important;
+  }
 }
 
 .apos-ui
