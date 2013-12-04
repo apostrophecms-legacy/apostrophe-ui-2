@@ -91,7 +91,11 @@
     display: none;
   }
 
-
+  &.left, &.right, &.center
+  {
+    position: absolute;
+    z-index: 899;
+  }
   &.left
   {
     top: 8px;
@@ -100,9 +104,14 @@
 
   &.right
   {
-    position: absolute;
     right: 8px;
     top: 8px;
+  }
+
+  &.center
+  {
+    top: 50%;
+    margin-top: -16px;
   }
 }
 
@@ -195,3 +204,35 @@
     }
   }
 }
+
+////////////////////
+// Admin hover UI
+///////////////////
+.apos-item-actions
+{
+  opacity: 0;
+  .apos-transition(opacity, 0.1s, linear);
+}
+
+.apos-lockup,
+.apos-item
+{
+  &:hover
+  {
+    .apos-item-actions
+    {
+      opacity: 1;
+    }
+  }
+}
+
+.apos-dragging .apos-item-actions,
+.apos-item:hover
+{
+  .apos-item-actions
+  {
+    opacity: 1;
+  }
+}
+
+.ui-tooltip {z-index: 9999;}
