@@ -29,11 +29,27 @@
   }  
 }
 
-// .apos-modal
-// {
-//   left: 799px;
-//   transition: left 0.2s ease;
-// }
+.apos-modal
+{
+  .apos-modal-title
+  {
+    font-family: 'Montserrat' !important;
+    text-transform: uppercase !important;
+    font-size: 10px !important;
+    letter-spacing: 1px;
+    padding: 6px 15px;
+  }
+
+    .apos-instructions
+    {
+      display: block;
+      line-height: 1.7em;
+      font-size: 13px;
+      text-transform: none;
+      padding: 11px 14px;
+      color: @apos-grey;
+    }
+}
 
 //////////////////////////////////////////////////////////////////////////
 // NEW MODAL STYLES /////////////////////////////////////////////////////
@@ -43,6 +59,13 @@
 {
   .clearfix;
   color: #6d6e70;
+
+  .apos-instructions
+  {
+    font-weight: normal;
+    letter-spacing: 0;
+    font-family: 'Montserrat';
+  }
   
   .apos-modal-body { padding: 0px; .clearfix; }
 
