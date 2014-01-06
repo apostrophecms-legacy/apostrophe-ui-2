@@ -5,8 +5,8 @@
 .apos-modal-container
 {
   position: fixed;
-  min-width: 800px;
-  max-width: 800px;
+  min-width: 90%;
+  max-width: 90%;
   min-height: 705px;
   top: 0;
   overflow: hidden;
@@ -29,11 +29,27 @@
   }  
 }
 
-// .apos-modal
-// {
-//   left: 799px;
-//   transition: left 0.2s ease;
-// }
+.apos-modal
+{
+  .apos-modal-title
+  {
+    font-family: 'Montserrat' !important;
+    text-transform: uppercase !important;
+    font-size: 10px !important;
+    letter-spacing: 1px;
+    padding: 6px 15px;
+  }
+
+    .apos-instructions
+    {
+      display: block;
+      line-height: 1.7em;
+      font-size: 13px;
+      text-transform: none;
+      padding: 11px 14px;
+      color: @apos-grey;
+    }
+}
 
 //////////////////////////////////////////////////////////////////////////
 // NEW MODAL STYLES /////////////////////////////////////////////////////
@@ -43,19 +59,41 @@
 {
   .clearfix;
   color: #6d6e70;
+  min-width: 80%;
+  max-width: 80%;
+
+  & > form{background-color: #eee}
+
+
+
+  .apos-instructions
+  {
+    font-weight: normal;
+    letter-spacing: 0;
+    font-family: 'Montserrat';
+  }
   
   .apos-modal-body { padding: 0px; .clearfix; }
 
   .apos-modal-header
   {
     .clearfix;
-    padding: 25px;
+    padding: 25px 0;
     background: #eee;
+    float: right;
+    width: 83%;
     
+    .apos-fieldset {margin-bottom: 0;}
+
     .apos-modal-header-label
     {
-      width: 20%;
+      // width: 13%;
+      padding-right: 15px;
+      padding-top: 12px;
+      padding-left: 40px;
       float: left;
+      // text-align: right;
+      font-size: 16px;
     }
     .apos-title-and-slug
     {
@@ -74,7 +112,10 @@
     {
       label, input { display: inline-block; }
       label { display: none; }
-      input[type="text"]{ width: 100%; max-width: none; }
+      input[type="text"]{
+        width: 100%;
+        max-width: none;
+      }
 
       &.apos-fieldset-slug
       {
@@ -85,6 +126,7 @@
       }
     }
   }
+
 
   // MODAL TAB COMPONENT ///////////////////////////////////////////////////
 
@@ -98,7 +140,7 @@
     .apos-modal-tab-control
     {
       float: left;
-      width: 20%;
+      width: 17%;
       min-height: 480px;
       background: #eee;
 
@@ -108,7 +150,7 @@
         position: relative;
         z-index: 1;
         width: 100%;
-        padding: 15px 10px 15px 15px;
+        padding: 20px 10px 20px 15px;
         border-bottom: 1px solid #ddd;
         border-right: 1px solid #ddd;
         cursor: pointer;
@@ -144,7 +186,7 @@
       float: left;
       position: relative;
       z-index: 100;
-      width: 80%;
+      width: 83%;
       background: #FFF;
       display: none;
       max-height: 480px;
@@ -190,11 +232,42 @@
     .apos-fieldset,
     .apos-fieldset-text
     {
+      margin-bottom: 35px;
+
+      input[type='text'],
+      input.tags,
+      textarea
+      {
+        font-family: 'cabin' !important;
+        font-size: 14px;
+        letter-spacing: 1px;
+        color: #333;
+        padding-left: 11px;
+      }
+      textarea{outline: 1;}
       label
       {
         font-family: 'Montserrat';
+        color: #A8A8A8;
+        margin-bottom: 8px;
       }
-      input
+      .apos-area,
+      textarea
+      {
+        padding: 14px;
+        font-family: 'cabin' !important;
+        text-transform: none;
+        // line-height: 1em !important;
+        letter-spacing: 0px;
+        .apos-ui-dropdown
+        {
+          position: relative;
+          z-index: 950;
+        }
+      }
+      input,
+      textarea,
+      .apos-area
       {
         border: 1px solid #ddd;
         -webkit-transition: border 0.2s ease;
