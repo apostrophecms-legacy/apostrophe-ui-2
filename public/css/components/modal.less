@@ -235,7 +235,8 @@
       margin-bottom: 35px;
 
       input[type='text'],
-      input.tags
+      input.tags,
+      textarea
       {
         font-family: 'cabin' !important;
         font-size: 14px;
@@ -243,13 +244,30 @@
         color: #333;
         padding-left: 11px;
       }
+      textarea{outline: 1;}
       label
       {
         font-family: 'Montserrat';
         color: #A8A8A8;
         margin-bottom: 8px;
       }
-      input
+      .apos-area,
+      textarea
+      {
+        padding: 14px;
+        font-family: 'cabin' !important;
+        text-transform: none;
+        // line-height: 1em !important;
+        letter-spacing: 0px;
+        .apos-ui-dropdown
+        {
+          position: relative;
+          z-index: 950;
+        }
+      }
+      input,
+      textarea,
+      .apos-area
       {
         border: 1px solid #ddd;
         -webkit-transition: border 0.2s ease;
