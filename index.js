@@ -12,10 +12,9 @@ ui2.Ui2 = function(options, callback) {
   // Mix in the ability to serve assets and templates
   self._apos.mixinModuleAssets(self, 'ui-2', __dirname, options);
 
-  self.pushAsset('stylesheet', 'editor', { when: 'user' });
+  // Not until we actually have one
+  // self.pushAsset('stylesheet', 'editor', { when: 'user' });
   self.pushAsset('stylesheet', 'content', { when: 'always' });
-
-  self.serveAssets();
 
   return process.nextTick(function() {
     return callback(null);
