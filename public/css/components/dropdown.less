@@ -11,9 +11,9 @@
 // N.B. We are creating these mix-ins because our markup is divergent
 // at this point and we're using styles to create consistency.
 
-// Takes either 1 (true) or 0 (false) for  before or after argument to determide
+// Takes 'before' or 'after' for the '@arrow' argument to determine
 // where the arrow should appear.
-.apos-ui-dropdown-container(@before, @after) {
+.apos-ui-dropdown-container(@arrow) {
 
   position:absolute !important;
   min-width: 150px; //Does this seem sensible?
@@ -24,7 +24,7 @@
   -webkit-border-radius: 3px;
           border-radius: 3px;
 
-  & when (@before > 0) {
+  & when (@arrow = 'before') {
     &:before
     {
       display: block;
@@ -37,7 +37,7 @@
     }
   }
 
-  & when (@after > 0) {
+  & when (@arrow = 'after') {
     &:after
     {
       content: "";
@@ -101,7 +101,7 @@
 
   .apos-ui-menu
   {
-    .apos-ui-dropdown-container(1, 0);
+    .apos-ui-dropdown-container('before');
     margin-top: 5px;
     li
     {
