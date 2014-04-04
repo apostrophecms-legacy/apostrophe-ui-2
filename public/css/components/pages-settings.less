@@ -8,35 +8,21 @@
 // to the aposPagesMenu macro in outerLayout.html
 .apos-pages-menu
 {
-  //positioning
   position: fixed;
   bottom: 30px;
   left: 30px;
-  //box-model
-  background: @apos-base;
-  //typography
-  //visuals
+  height: 70px !important;
+  padding: 0 !important;
+  margin-right: 0px;
   .apos-ui;
   color: white;
-  //display: inline-block;
-  //min-width: 36px;
   line-height: 14px;
-
-  margin-right: 0px;
-
-  text-shadow: 0.2em 0.1em rgba(0,0,0,0.2);
-  // Be smarter about this.
-  //padding: 0.65em 1em;
-
-  //text-align: center;
   cursor: pointer;
-
+  background: @apos-base;
   .apos-bg-gradient(@apos-base, @apos-lighten-10);
-
   border: 1px solid @apos-shade-5;
   border-radius: 3px;
   -webkit-border-radius: 3px;
-
 
   &:hover
   {
@@ -55,6 +41,17 @@
   .apos-accordion-title
   {
     cursor: pointer;
+    padding: 30px !important;
+    background: url('/modules/apos/images/apos-pages-settings.png') no-repeat center 35%;
+    // background-size: cover;
+    //width: 20px;
+    i
+    {
+      &:before
+      {
+        content: " ";
+      }
+    }
   }
 
   .apos-accordion-items
@@ -64,5 +61,52 @@
     top: -190px; //This is hard-coded based on the amount of items. Doesn't feel good.
     //box-model
     min-width: 140px;
+    min-height: 100%;
+    //visuals
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    .apos-bg-gradient(@apos-grey5, @apos-grey);
+    background-size: 100% 100%;
+    border-radius: 3px;
+    overflow: visible !important;
+
+    // Tricky little triangle
+    &:after
+    {
+      content: "";
+      border: transparent 10px solid ;
+      border-top: @apos-grey 10px solid;
+      position:absolute;
+      bottom: -20px;
+      left: 15px;
+    }
+
+    //The actual items themselves.
+    ul
+    {
+      .apos-accordion-item
+      {
+        background: transparent !important;
+        color: @apos-grey-blue !important;
+        -webkit-transition: all .1s ease;
+        -moz-transition: all .1s ease;
+        &:hover
+        {
+          color: #fff !important;
+          background: @apos-grey-10 !important;
+          text-shadow: none;
+        }
+        &:first-child
+        {
+          border-top-right-radius: 3px;
+          border-top-left-radius: 3px;
+        }
+        &:last-child
+        {
+          border-bottom-right-radius: 3px;
+          border-bottom-left-radius: 3px;
+        }
+      }
+    }
   }
 }
