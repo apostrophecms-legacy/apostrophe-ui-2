@@ -1,30 +1,39 @@
 .apos-admin-bar
 {
   position: fixed;
-  top: 10px;
-  left: 10px;
+  top: 15px;
+  left: 15px;
   width: auto;
-  z-index: 1000;
-  height: 80px;
+  white-space: nowrap;
+
+  z-index: 899;
+  height: 60px;
   
   background-color: transparent;
   box-shadow: none;
   -webkit-box-shadow: none;
-  
+
+  border-radius: 3px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+
   .apos-admin-bar-inner
   {
     .clearfix;
-    border-radius: 5px;
-    box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+    white-space: nowrap;
+    border-radius: 3px;
+    max-width: 1400px;
+    @transition-time: cubic-bezier(0.64, 0.14, 0.41, 0.83);
+    transition: max-width 0.5s @transition-time;       
   }
-
     
   &.collapsed
   {
-    width: 60px;
-    height: 60px;
-    overflow: hidden;
-    &:hover { overflow: visible; width: auto; }
+    .apos-admin-bar-inner
+    {
+      overflow: hidden;
+      max-width: 60px;
+      height: 60px;  
+    }
   }
   
   .apos-logo-tiny
@@ -46,14 +55,14 @@
       background-position: 50% 50%; 
     }
 
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    .apos-bg-gradient(darken(@apos-base, 10%), @apos-base);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
     .apos-bg-gradient(@apos-base, darken(@apos-base, 10%));
   }
 
   .apos-admin-bar-item
   {
+    white-space: nowrap;
     height: 60px;
     line-height: 60px;
     background-color: #ccc;
@@ -75,16 +84,17 @@
     
     &:last-child
     {
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
     }
 
     &.apos-accordion-menu
     {
+      white-space: nowrap;
       position: relative;
       border-right: 1px solid #ddd;
       .apos-accordion-title { color: #333; font-weight: bold; }
-      .apos-accordion-items { width: 150px; }
+      .apos-accordion-items { white-space: nowrap; width: 150px; }
       &.open
       {
         background: #ddd;
@@ -96,14 +106,14 @@
 
           .apos-page-bar li:first-child
           {
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
           }          
 
           .apos-page-bar li:last-child
           {
-            border-bottom-left-radius: 5px;
-            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 3px;
+            border-bottom-right-radius: 3px;
           }
         }
 
