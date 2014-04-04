@@ -1,0 +1,68 @@
+/* ---------------------------------------------------------------*/
+/* ---------------------------------------------------------------*/
+// The new apostrophe pages settings button
+/* ---------------------------------------------------------------*/
+/* ---------------------------------------------------------------*/
+
+//N.B. To get this class added to your menu, simply pass "bottom: true"
+// to the aposPagesMenu macro in outerLayout.html
+.apos-pages-menu
+{
+  //positioning
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  //box-model
+  background: @apos-base;
+  //typography
+  //visuals
+  .apos-ui;
+  color: white;
+  //display: inline-block;
+  //min-width: 36px;
+  line-height: 14px;
+
+  margin-right: 0px;
+
+  text-shadow: 0.2em 0.1em rgba(0,0,0,0.2);
+  // Be smarter about this.
+  //padding: 0.65em 1em;
+
+  //text-align: center;
+  cursor: pointer;
+
+  .apos-bg-gradient(@apos-base, @apos-lighten-10);
+
+  border: 1px solid @apos-shade-5;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+
+
+  &:hover
+  {
+    .apos-bg-gradient(@apos-shade-5, @apos-base);
+  }
+
+  &:active,
+  &.apos-active
+  {
+    .apos-bg-gradient(@apos-shade-10, @apos-base);
+  }
+
+
+  // We're keeping this nested to control scope as much as possible.
+  //TODO: Make this the right icon.
+  .apos-accordion-title
+  {
+    cursor: pointer;
+  }
+
+  .apos-accordion-items
+  {
+    //positioning
+    position:absolute !important;
+    top: -190px; //This is hard-coded based on the amount of items. Doesn't feel good.
+    //box-model
+    min-width: 140px;
+  }
+}
