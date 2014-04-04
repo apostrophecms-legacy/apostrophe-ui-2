@@ -5,9 +5,9 @@
 /* ---------------------------------------------------------------*/
 
 // N.B. To get this class added to your menu, simply
-// move the macro in outerLayout.html outside of the 
-// apos-admin-bar menu and then pass "bottom: true" 
-// to the aposPagesMenu macro 
+// move the macro in outerLayout.html outside of the
+// apos-admin-bar menu and then pass "bottom: true"
+// to the aposPagesMenu macro
 .apos-pages-menu
 {
   position: fixed;
@@ -19,10 +19,10 @@
   margin-right: 0px;
   .apos-ui;
   color: white;
-  line-height: 14px;
+  //line-height: 14px;
   cursor: pointer;
   background: @apos-base;
-  .apos-bg-gradient(@apos-base, @apos-lighten-10);
+  .apos-bg-gradient(@apos-base, darken(@apos-base, 10%));
   border: 1px solid @apos-shade-5;
   border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -44,7 +44,7 @@
   {
     cursor: pointer;
     padding: 30px !important;
-    background: url('/modules/apos/images/apos-pages-settings.png') no-repeat center 35%;
+    background: url('/modules/apos/images/apos-pages-settings.png') no-repeat center 25%;
     // background-size: cover;
     //width: 20px;
     i
@@ -58,60 +58,18 @@
 
   .apos-accordion-items
   {
+    .apos-ui-dropdown-container(0, 1);
     //positioning
     display: none;
     position:absolute !important;
     top: -230px; //This is hard-coded based on the amount of items. Doesn't feel good.
-    //box-model
-    min-width: 150px;
-    min-height: 100%;
-    //visuals
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    .apos-bg-gradient(@apos-grey5, @apos-grey);
-    background-size: 100% 100%;
-    border-radius: 3px;
-    overflow: visible !important;
-
-    // Tricky little triangle
-    &:after
-    {
-      content: "";
-      border: transparent 10px solid ;
-      border-top: @apos-grey 10px solid;
-      position:absolute;
-      bottom: -20px;
-      left: 15px;
-    }
 
     //The actual items themselves.
     ul
     {
       .apos-accordion-item
       {
-        background: transparent !important;
-        color: @apos-grey-blue !important;
-        -webkit-transition: all .1s ease;
-        -moz-transition: all .1s ease;
-        width: 160px;
-        margin-right: 0px;
-        padding: 15px;
-        &:hover
-        {
-          color: #fff !important;
-          background: @apos-grey-10 !important;
-          text-shadow: none;
-        }
-        &:first-child
-        {
-          border-top-right-radius: 3px;
-          border-top-left-radius: 3px;
-        }
-        &:last-child
-        {
-          border-bottom-right-radius: 3px;
-          border-bottom-left-radius: 3px;
-        }
+        .apos-ui-dropdown-item();
       }
     }
   }
