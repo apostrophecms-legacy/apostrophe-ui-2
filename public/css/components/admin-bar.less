@@ -1,0 +1,134 @@
+.apos-admin-bar
+{
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: auto;
+  z-index: 1000;
+  height: 80px;
+  
+  background-color: transparent;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  
+  .apos-admin-bar-inner
+  {
+    .clearfix;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+  }
+
+    
+  &.collapsed
+  {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    &:hover { overflow: visible; width: auto; }
+  }
+  
+  .apos-logo-tiny
+  {
+    position: relative;    
+    width: 60px;
+    height: 60px;
+    
+    &::after
+    {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60px;
+      height: 60px;   
+      background-image: url('/modules/ui-2/images/apos-logo-white.png');
+      background-repeat: no-repeat;
+      background-position: 50% 50%; 
+    }
+
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    .apos-bg-gradient(darken(@apos-base, 10%), @apos-base);
+    .apos-bg-gradient(@apos-base, darken(@apos-base, 10%));
+  }
+
+  .apos-admin-bar-item
+  {
+    height: 60px;
+    line-height: 60px;
+    background-color: #ccc;
+    color: #333;
+    font-weight: bold;
+    user-select: none;
+    .apos-bg-gradient(#eee, #fff);
+    &.login-status { .apos-bg-gradient(#ccc, #fff); }
+
+    a
+    {
+      user-select: none;
+      height: 60px;
+      line-height: 60px;
+      padding: 0 30px;
+      color: #333 !important;
+      &:hover { background: transparent; }
+    }
+    
+    &:last-child
+    {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    &.apos-accordion-menu
+    {
+      position: relative;
+      border-right: 1px solid #ddd;
+      .apos-accordion-title { color: #333; font-weight: bold; }
+      .apos-accordion-items { width: 150px; }
+      &.open
+      {
+        background: #ddd;
+        .apos-accordion-items
+        {
+          position: relative;
+          top: 10px;
+          left: 15px;
+
+          .apos-page-bar li:first-child
+          {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+          }          
+
+          .apos-page-bar li:last-child
+          {
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+          }
+        }
+
+        &::after
+        {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: -12px;
+          left: 40px;
+          margin-left: -10px;
+          z-index: 1;
+          border: 10px solid transparent;
+          border-bottom: 10px solid rgba(50,50,50,0.8);
+        }
+      }
+    }
+
+    > .apos-accordion-title
+    {
+      height: 60px;
+      line-height: 60px;
+      padding: 0;
+      text-align: center; 
+      i { display: none; }
+    }
+  }  
+}
