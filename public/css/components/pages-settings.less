@@ -1,0 +1,75 @@
+/* ---------------------------------------------------------------*/
+/* ---------------------------------------------------------------*/
+// The new apostrophe pages settings button
+/* ---------------------------------------------------------------*/
+/* ---------------------------------------------------------------*/
+
+// N.B. To get this class added to your menu, simply
+// move the macro in outerLayout.html outside of the
+// apos-admin-bar menu and then pass "bottom: true"
+// to the aposPagesMenu macro
+.apos-pages-menu
+{
+  position: fixed;
+  z-index: 899;
+  bottom: 15px;
+  left: 15px;
+  height: 70px !important;
+  padding: 0 !important;
+  margin-right: 0px;
+  .apos-ui;
+  color: white;
+  //line-height: 14px;
+  cursor: pointer;
+  background: @apos-base;
+  .apos-bg-gradient(@apos-base, darken(@apos-base, 10%));
+  border: 1px solid @apos-shade-5;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+
+  &:hover { .apos-bg-gradient(@apos-shade-5, @apos-base); }
+
+  &:active,
+  &.apos-active
+  {
+    .apos-bg-gradient(@apos-shade-10, @apos-base);
+  }
+
+  // We're keeping this nested to control scope as much as possible.
+  //TODO: Make this the right icon.
+  .apos-accordion-title
+  {
+    cursor: pointer;
+    padding: 30px !important;
+    background: url('/modules/apos/images/apos-pages-settings.png') no-repeat center 25%;
+    // background-size: cover;
+    //width: 20px;
+    i
+    {
+      &:before
+      {
+        content: " ";
+      }
+    }
+  }
+
+  .apos-accordion-items
+  {
+    .apos-ui-dropdown-container('after');
+    //positioning
+    display: none;
+    position:absolute !important;
+    top: -230px; //This is hard-coded based on the amount of items. Doesn't feel good.
+
+    //The actual items themselves.
+    ul
+    {
+      .apos-accordion-item
+      {
+        .apos-ui-dropdown-item();
+      }
+    }
+  }
+
+  &.open .apos-accordion-items { display: block; }
+}

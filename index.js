@@ -15,6 +15,7 @@ ui2.Ui2 = function(options, callback) {
   // Not until we actually have one
   // self.pushAsset('stylesheet', 'editor', { when: 'user' });
   self.pushAsset('stylesheet', 'content', { when: 'always' });
+  self.pushAsset('script', 'ui-2', { when: 'always' });
 
   return process.nextTick(function() {
     return callback(null);

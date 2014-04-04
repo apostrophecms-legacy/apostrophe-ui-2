@@ -71,8 +71,6 @@
   background-size: 100% 100px;
 }
 
-
-
 .clearfix
 {
   zoom: 1;
@@ -191,18 +189,19 @@
   }
 }
 
-.apos-ui-btn-group
+.apos-ui-container .apos-ui-btn-group
 {
   font-size: 0px;
-
 
   .apos-ui-btn
   {
     -webkit-border-radius: 0px;
             border-radius: 0px;
+    position: relative;
       
     &:first-child
     {
+      left: auto;
       border-right: 0px;
       -webkit-border-top-left-radius: 3px;
               border-top-left-radius: 3px;
@@ -218,6 +217,10 @@
       -webkit-border-bottom-right-radius: 3px;
               border-bottom-right-radius: 3px;        
     }
+  }
+  .apos-ui-dropdown
+  {
+    
   }
 }
 
