@@ -176,6 +176,15 @@
   border-radius: 3px;
   -webkit-border-radius: 3px;
 
+  .icon-double-angle-up,
+  .icon-double-angle-down
+  {
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+
+
 
   &:hover
   {
@@ -185,10 +194,39 @@
   &:active,
   &.apos-active
   {
-    .apos-bg-gradient(@apos-shade-10, @apos-base);
+    .apos-bg-gradient(@apos-shade-10, @apos-base) ;
+  }
+  &.apos-disabled,
+  &.apos-disabled:hover
+  {
+
   }
 }
 
+// disabled states for nudging arrows
+.apos-disabled-arrow()
+{
+  cursor: not-allowed;
+  .apos-bg-gradient(@apos-shade-20, @apos-base);
+  i{opacity: 0.5;}
+}
+.apos-area .apos-content > div:first-child
+{
+  [data-move-item="up"],
+  [data-move-item="top"],
+  {
+    .apos-disabled-arrow();
+  }
+}
+
+.apos-area .apos-content > div:last-child
+{
+  [data-move-item="down"],
+  [data-move-item="bottom"],
+  {
+    .apos-disabled-arrow();
+  }
+}
 .apos-ui-container .apos-ui-btn-group
 {
   font-size: 0px;
