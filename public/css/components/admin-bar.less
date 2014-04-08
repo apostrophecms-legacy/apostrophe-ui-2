@@ -73,7 +73,7 @@
     .apos-bg-gradient(#eee, #fff);
     &.login-status { .apos-bg-gradient(#ccc, #fff); }
 
-    a
+    a.apos-button
     {
       user-select: none;
       height: 60px;
@@ -102,12 +102,17 @@
 
         .apos-ui-dropdown-container('before');
         width: 180px;
+        min-height: 0;
         display: none;
         margin-top: 5px;
         .apos-accordion-item
         {
           .apos-ui-dropdown-item();
-
+          > a
+          {
+            .apos-ui-dropdown-item();
+            padding: 0;
+          }
         }
       }
 
