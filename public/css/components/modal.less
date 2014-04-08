@@ -34,6 +34,7 @@
 
 .apos-modal
 {
+  background-color: @apos-grey-light;
   .apos-modal-title
   {
     font-family: 'Cabin';
@@ -66,7 +67,12 @@
   min-width: 80%;
   max-width: 80%;
 
-  & > form{background-color: #eee}
+  & > form 
+  {
+    background-color: @apos-grey-light;
+
+
+  }
 
 
 
@@ -74,16 +80,16 @@
   {
     font-weight: normal;
     letter-spacing: 0;
-    font-family: 'Montserrat';
+    .apos-montserrat;
   }
   
-  .apos-modal-body { padding: 0px; .clearfix; }
+  .apos-modal-body { padding: 30px 0 0; .clearfix; }
 
   .apos-modal-header
   {
     .clearfix;
     padding: 25px 0;
-    background: #eee;
+    background: @apos-grey-light;
     float: right;
     width: 83%;
     
@@ -117,7 +123,8 @@
       label, input { display: inline-block; }
       label { display: none; }
       input[type="text"]{
-        width: 100%;
+        width: 30%;
+        display: inline-block;
         max-width: none;
       }
 
@@ -158,7 +165,7 @@
         border-bottom: 1px solid #ddd;
         border-right: 1px solid #ddd;
         cursor: pointer;
-        font-family: 'Montserrat';
+        .apos-montserrat;
         // background: #eee;
 
         &.apos-active
@@ -218,10 +225,64 @@
       .apos-modal-tab-content
       {
         padding: 25px 40px;
-      }     
+      }
+
+
+      /// FORM STYLES WITHIN TABS   
+      form
+      {
+        .apos-fieldset,
+        .apos-fieldset-text
+        {
+          margin-bottom: 35px;
+
+          input[type='text'],
+          input.tags,
+          textarea
+          {
+            padding-left: 11px;
+            display: block;
+          }
+
+          // textarea{outline: 1;}
+
+          label
+          {
+            margin-bottom: 8px;
+            display: block;
+            width: 100%;
+          }
+
+          .apos-area,
+          textarea
+          {
+            .apos-ui-dropdown
+            {
+              position: relative;
+              z-index: 950;
+            }
+          }
+          input,
+          textarea,
+          .apos-area
+          {
+          }
+
+          .apos-select-wrapper
+          {
+            select { border: 1px solid @apos-base; }
+            .apos-select-arrow { margin-top: -8px; background-color:@apos-base; }
+          }
+        }
+        .apos-fieldset-singleton
+        {
+          label {float: none;}
+        }
+      }
+
     }
   }
-  ///////// END TABS
+  //// FORM STYLES OUTSIDE OF TABS
 }
 
 
@@ -247,21 +308,26 @@
         letter-spacing: 1px;
         color: #333;
         padding-left: 11px;
+        display: inline-block;
       }
+
       textarea{outline: 1;}
+
       label
       {
-        font-family: 'Montserrat';
-        color: #A8A8A8;
+        .apos-montserrat;
+        color: @apos-grey-green;
+        background-color: transparent;
         margin-bottom: 8px;
+        width: 150px;
       }
+
       .apos-area,
       textarea
       {
         padding: 14px;
         font-family: 'cabin' !important;
         text-transform: none;
-        // line-height: 1em !important;
         letter-spacing: 0px;
         .apos-ui-dropdown
         {
