@@ -228,61 +228,55 @@
       }
 
 
-      /// FORM STYLES WITHIN TABS   
-      form
+      /// FORM STYLES WITHIN TABS //
+      .apos-fieldset,
+      .apos-fieldset-text
       {
-        .apos-fieldset,
-        .apos-fieldset-text
+        margin-bottom: 35px;
+
+        input[type='text'],
+        input.tags,
+        textarea
         {
-          margin-bottom: 35px;
+          padding-left: 11px;
+          display: block;
+        }
 
-          input[type='text'],
-          input.tags,
-          textarea
-          {
-            padding-left: 11px;
-            display: block;
-          }
 
-          // textarea{outline: 1;}
+        label
+        {
+          margin-bottom: 8px;
+          display: block;
+          width: 100%;
+          padding-left: 0px;
+        }
 
-          label
+        .apos-area,
+        textarea
+        {
+          .apos-ui-dropdown
           {
-            margin-bottom: 8px;
-            display: block;
-            width: 100%;
-          }
-
-          .apos-area,
-          textarea
-          {
-            .apos-ui-dropdown
-            {
-              position: relative;
-              z-index: 950;
-            }
-          }
-          input,
-          textarea,
-          .apos-area
-          {
-          }
-
-          .apos-select-wrapper
-          {
-            select { border: 1px solid @apos-base; }
-            .apos-select-arrow { margin-top: -8px; background-color:@apos-base; }
+            position: relative;
+            z-index: 950;
           }
         }
-        .apos-fieldset-singleton
+
+        .apos-area
         {
-          label {float: none;}
+          margin: 0;
         }
       }
-
     }
   }
-  //// FORM STYLES OUTSIDE OF TABS
+  //// SPECIFIC FORM STYLES OUTSIDE OF TABS /////
+
+  // thumbnail div
+  .apos-fieldset-thumbnail div[data-thumbnail-edit-view]
+  {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 200px;
+  } 
 }
 
 
@@ -292,14 +286,21 @@
 
 .apos-modal.apos-ui
 {
+  .apos-area
+  {
+    margin: 0 20px;
+  }
+
   form
   {
+    .lister-selected-top { margin-left: 0px; }
     .apos-fieldset,
     .apos-fieldset-text
     {
       margin-bottom: 35px;
 
       input[type='text'],
+      input[name='tags'],
       input.tags,
       textarea
       {
@@ -320,6 +321,8 @@
         background-color: transparent;
         margin-bottom: 8px;
         width: 150px;
+        padding-left: 20px;
+        line-height: 16px;
       }
 
       .apos-area,
