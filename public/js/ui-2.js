@@ -1,12 +1,7 @@
 $(function(){
   setTimeout(function(){
-    $(window).on('scroll', function(){
-      $(window).off();
-      setTimeout(function(){
-        $('.apos-admin-bar').addClass('collapsed');
-      }, 1000); 
-    });
-  }, 1000);
+    $('.apos-admin-bar').addClass('collapsed');
+  }, 3000);
 
   $('.apos-logo-tiny').on('click', function(){ 
     $('.apos-admin-bar').css('overflow', 'hidden');  
