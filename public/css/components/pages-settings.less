@@ -15,7 +15,7 @@
 .apos-pages-menu
 {
   position: fixed;
-  z-index: 915;
+  z-index: 899;
   bottom: 15px;
   left: 15px;
   // height: 70px !important;
@@ -25,6 +25,11 @@
   box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
   margin-right: 0px;
   padding: 4px;
+
+  &.open
+  {
+    z-index: 900;
+  }
 
 
   // We're keeping this nested to control scope as much as possible.
@@ -61,8 +66,8 @@
       pointer-events: none;
     }
 
-    &:hover 
-    { 
+    &:hover
+    {
       .apos-bg-gradient(@apos-shade-5, @apos-base);
     }
     &:active,
