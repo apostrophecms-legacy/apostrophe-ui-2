@@ -285,7 +285,7 @@
 // BASE FORM STYLES //////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////
 
-.apos-modal.apos-ui
+.apos-modal.apos-ui,
 {
   .apos-area
   {
@@ -365,5 +365,11 @@
     {
       label {float: none;}
     }
+  }
+
+  //Adding special rule for schema widgets, which don't have tabs so needs some paddin'
+  &.apos-schema-widget .apos-fieldset
+  {
+    padding: 20px;
   }
 }
