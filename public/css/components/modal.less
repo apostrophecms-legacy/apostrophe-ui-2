@@ -269,6 +269,9 @@
       }
     }
   }
+
+
+
   //// SPECIFIC FORM STYLES OUTSIDE OF TABS /////
 
   // thumbnail div
@@ -278,6 +281,18 @@
     vertical-align: top;
     min-width: 200px;
   }
+
+  // MODAL NON-TAB CASE ///////////////////
+  &.apos-no-tabs
+  {
+    .apos-fieldset
+    {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+
 }
 
 
@@ -311,6 +326,13 @@
         color: #333;
         padding-left: 11px;
         display: inline-block;
+        //Stealing this guy from content.less in the apostrophe module.
+        .apos-input();
+        border: 1px solid #ddd;
+        &.apos-input-narrow
+        {
+          max-width: 50px;
+        }
       }
 
       textarea{outline: 1;}
@@ -324,6 +346,10 @@
         width: 150px;
         padding-left: 20px;
         line-height: 16px;
+        &.apos-wide-label
+        {
+          width: 250px;
+        }
       }
 
       .apos-area,
@@ -364,6 +390,49 @@
     .apos-fieldset-singleton
     {
       label {float: none;}
+    }
+    .apos-form-inline-instructions
+    {
+      margin: 0 0 15px;
+      padding: 0;
+    }
+
+    // MODAL INSET FIELDSETS ///////////////////
+    // For use with widgets that have dynamically switched form content (see blog2). --Joel
+    .apos-fieldset.apos-fieldset-inset
+    {
+      background: #fff;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-left: 30px;
+      padding-right: 30px;
+      margin-left: 15px;
+      margin-right: 15px;
+      label
+      {
+        padding-left: 0;
+      }
+    }
+    .apos-fieldset.apos-fieldset-inset-controller
+    {
+      background: @apos-grey10;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 30px;
+      padding-right: 30px;
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-bottom: 0;
+      label
+      {
+        color: white;
+        padding-left: 0;
+      }
+    }
+    //For any inner-elements that just need some spacing
+    .apos-fieldset-inset-inner
+    {
+      margin-bottom: 35px;
     }
   }
 
