@@ -80,11 +80,11 @@
   {
     font-weight: normal;
     letter-spacing: 0;
-    margin: 0 15px 15px;
+    // margin: 0 15px 15px;
     .apos-montserrat;
   }
 
-  .apos-modal-body { padding: 30px 0 0; .clearfix; }
+  .apos-modal-body { padding: 30px 30px 0; .clearfix; }
 
   .apos-modal-header
   {
@@ -121,7 +121,7 @@
 
     .apos-fieldset
     {
-      label, input { display: inline-block; }
+      input { display: inline-block; }
       label { display: none; }
       input[type="text"]{
         width: 30%;
@@ -307,8 +307,8 @@
     margin: 0 20px;
   }
 
-  form
-  {
+  // form
+  // {
     .lister-selected-top { margin-left: 0px; }
     .apos-fieldset,
     .apos-fieldset-text
@@ -342,9 +342,9 @@
         .apos-montserrat;
         color: @apos-grey-green;
         background-color: transparent;
-        margin-bottom: 8px;
-        width: 150px;
-        padding-left: 20px;
+        // margin-bottom: 8px;
+        // width: 150px;
+        // padding-left: 20px;
         line-height: 16px;
         &.apos-wide-label
         {
@@ -384,7 +384,16 @@
       .apos-select-wrapper
       {
         select { border: 1px solid @apos-base; }
-        .apos-select-arrow { margin-top: -8px; background-color:@apos-base; }
+
+
+        .apos-select-arrow 
+        {
+          background-color:@apos-base;
+          .icon 
+          {
+            font-size: 14px;
+          }
+        }
       }
     }
     .apos-fieldset-singleton
@@ -434,7 +443,7 @@
     {
       margin-bottom: 35px;
     }
-  }
+  // }
 
   //Adding special rule for schema widgets, which don't have tabs so needs some paddin'
   &.apos-schema-widget .apos-fieldset
@@ -442,3 +451,20 @@
     padding: 20px;
   }
 }
+
+  .apos-inline-input
+{
+  max-width: 385px;
+  position: relative;
+  .apos-ui-inline-btn
+  {
+    padding: 10px;
+    position: absolute;
+    right: 1px;
+    top: 2px;
+    border-left: 1px solid #ddd;
+    -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0);
+    box-shadow: 1px 1px 5px rgba(0,0,0,0);
+  }
+}
+

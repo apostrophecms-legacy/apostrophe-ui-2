@@ -170,7 +170,7 @@
   text-align: center;
   cursor: pointer;
 
-  .apos-bg-gradient(@apos-base, @apos-lighten-10);
+  .apos-base-grad();
   
   border: 1px solid @apos-shade-5;
   border-radius: 3px;
@@ -200,6 +200,28 @@
   &.apos-disabled:hover
   {
 
+  }
+
+  &.apos-ui--dark
+  {
+    .apos-dark-grad();
+    border: 1px solid @apos-grey-10;
+
+    &:hover
+    {
+      .apos-dark-grad(@to:@apos-grey30);
+    }
+
+    &:active,
+    &.apos-active
+    {
+      .apos-dark-grad(@to:@apos-grey20);
+    }
+    &.apos-disabled,
+    &.apos-disabled:hover
+    {
+      opacity: 0.5;
+    }
   }
 }
 
@@ -300,3 +322,5 @@
 }
 
 .ui-tooltip {z-index: 9999;}
+.apos-selective-list{margin-top: 20px;}
+// .ui-autocomplete-input{margin-bottom: 20px;}
