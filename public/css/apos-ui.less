@@ -48,8 +48,8 @@
 
 .apos-transition(@property, @time, @ease)
 {
-  -webkit-transition: @property @time @ease;  
-  -moz-transition: @property @time @ease;  
+  -webkit-transition: @property @time @ease;
+  -moz-transition: @property @time @ease;
   transition: @property @time @ease;
 }
 
@@ -89,7 +89,7 @@
 }
 
 .apos-ui-container
-{ 
+{
   position: relative;
   min-width: 45px;
   display: inline-block;
@@ -99,7 +99,7 @@
           border-radius: 2px;
   -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
           box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
-  
+
   &:empty
   {
     display: none;
@@ -141,10 +141,10 @@
 .apos-ui
 {
   text-transform: uppercase;
-  font-family: 'Cabin';  
-  letter-spacing: 0.25em;
+  font-family: 'Cabin';
+  letter-spacing: 1.5px;
   font-size: 11px;
-  font-weight: bold;  
+  font-weight: bold;
 }
 
 .apos-singleton .apos-ui-container
@@ -163,15 +163,15 @@
   line-height: 14px;
 
   margin-right: 0px;
-  
+
   text-shadow: 0.2em 0.1em rgba(0,0,0,0.2);
   padding: 0.65em 1em;
-  
+
   text-align: center;
   cursor: pointer;
 
   .apos-base-grad();
-  
+
   border: 1px solid @apos-shade-5;
   border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -258,7 +258,7 @@
     -webkit-border-radius: 0px;
             border-radius: 0px;
     position: relative;
-      
+
     &:first-child
     {
       left: auto;
@@ -266,7 +266,7 @@
       -webkit-border-top-left-radius: 3px;
               border-top-left-radius: 3px;
       -webkit-border-bottom-left-radius: 3px;
-              border-bottom-left-radius: 3px;        
+              border-bottom-left-radius: 3px;
     }
 
     &:last-child
@@ -275,12 +275,12 @@
       -webkit-border-top-right-radius: 3px;
               border-top-right-radius: 3px;
       -webkit-border-bottom-right-radius: 3px;
-              border-bottom-right-radius: 3px;        
+              border-bottom-right-radius: 3px;
     }
   }
   .apos-ui-dropdown
   {
-    
+
   }
 }
 
