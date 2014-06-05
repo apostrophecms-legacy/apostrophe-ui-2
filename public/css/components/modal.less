@@ -362,8 +362,9 @@
       textarea
       {
         padding: 14px;
-        font-family: 'cabin' !important;
+        //font-family: 'cabin' !important;
         text-transform: none;
+        font-size: 14px;
         letter-spacing: 0px;
         .apos-ui-dropdown
         {
@@ -387,15 +388,21 @@
         }
       }
 
+      .apos-area
+      {
+        background: white;
+        min-height: 150px;
+      }
+
       .apos-select-wrapper
       {
         select { border: 1px solid @apos-base; }
 
 
-        .apos-select-arrow 
+        .apos-select-arrow
         {
           background-color:@apos-base;
-          .icon 
+          .icon
           {
             font-size: 14px;
           }
@@ -473,4 +480,3 @@
     box-shadow: 1px 1px 5px rgba(0,0,0,0);
   }
 }
-
