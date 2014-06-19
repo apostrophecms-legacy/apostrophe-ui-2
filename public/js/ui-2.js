@@ -1,6 +1,8 @@
 $(function(){
   setTimeout(function(){
-    $('.apos-admin-bar').addClass('collapsed');
+    if (!$('.apos-admin-bar').hasClass('item-open')) {
+      $('.apos-admin-bar').addClass('collapsed');
+    }
   }, 3000);
 
   $('.apos-logo-tiny').on('click', function(){ 
