@@ -42,8 +42,8 @@
       z-index: -1;
       top: 3px;
       left: -8px;
-      width: 20px; 
-      height: 20px; 
+      width: 20px;
+      height: 20px;
       background-color: white;
       -webkit-transform: rotate(45deg);
       transform: rotate(45deg);
@@ -131,43 +131,47 @@
 
 
 /// Pager
-
-.apos-pager
+// we need to scope the pager styles to the modal
+// so they do not bleed into project-level styles
+.apos-ui-modal-body
 {
-  text-align: center;
-  font-family: 'cabin', Helvetica,sans-serif;
-  font-weight: bold;
-  font-size: 11px;
-  padding: 1.4em 0;
-  a
+  .apos-pager
   {
-    color: @apos-grey30;
-    padding: 5px 8px;
-    border-radius: 3px;
-    &:hover
+    text-align: center;
+    font-family: 'cabin', Helvetica,sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 1.4em 0;
+    a
     {
-      .apos-bg-gradient(@apos-steel, @apos-grey50);
-      color: white;
-    }
-  }
-  .apos-pager-number
-  {
-    margin-left: 0.3em;
-    &.apos-active
-    {
-      .apos-bg-gradient(@apos-steel, @apos-grey50);
-      color: white;
-      display: inline-block;
+      color: @apos-grey30;
       padding: 5px 8px;
       border-radius: 3px;
+      &:hover
+      {
+        .apos-bg-gradient(@apos-steel, @apos-grey50);
+        color: white;
+      }
     }
-  }
-  .apos-pager-gap
-  {
-    margin-left: 1em;
-  }
-  .apos-pager-number.apos-first
-  {
-    margin-left: 0;
+    .apos-pager-number
+    {
+      margin-left: 0.3em;
+      &.apos-active
+      {
+        .apos-bg-gradient(@apos-steel, @apos-grey50);
+        color: white;
+        display: inline-block;
+        padding: 5px 8px;
+        border-radius: 3px;
+      }
+    }
+    .apos-pager-gap
+    {
+      margin-left: 1em;
+    }
+    .apos-pager-number.apos-first
+    {
+      margin-left: 0;
+    }
   }
 }
