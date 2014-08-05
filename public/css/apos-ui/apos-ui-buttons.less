@@ -14,6 +14,7 @@
   background-color: white;
   color: @apos-grey-green;
   z-index: 1;
+  .transition();
 
   -webkit-transition: all .2s ease;
   -moz-transition: all .2s ease;
@@ -30,11 +31,23 @@
     float: right;
     margin-left: 10px;
   }
-
+  &.apos-progress-btn--base
+  {
+    .apos-bg-gradient(@apos-orange-dark, @apos-orange-light);
+    color: white;
+    border: 1px solid @apos-base;
+  }
+  &.apos-progress-btn--dark
+  {
+    background-color: @apos-steel;
+    border: 1px solid @apos-steel;
+    color: white;
+  }
   &.apos-progress-btn--arrow-left
   {
     padding-left: 13px;
     margin-left: 11px;
+    border-left: 0px;
     &:before
     {
       content: '';
@@ -57,25 +70,33 @@
     &.apos-progress-btn--dark:before
     {
       background-color: @apos-steel;
+      border: 1px solid @apos-steel;
     }
   }
   &.apos-progress-btn--arrow-right
   {
-
+    padding-right: 9px;
+    margin-right: 11px;
+    border-right: 0px;
+    &:before
+    {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 3px;
+      right: -11px;
+      width: 22px;
+      height: 22px;
+      background-color: white;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      border-radius: 3px;
+    }
     &.apos-progress-btn--base:before
     {
       .apos-bg-gradient(@apos-orange-dark, @apos-orange-light);
+      border: 1px solid @apos-base;
     }
-  }
-  &.apos-progress-btn--base
-  {
-    .apos-bg-gradient(@apos-orange-dark, @apos-orange-light);
-    color: white;
-  }
-  &.apos-progress-btn--dark
-  {
-    background-color: @apos-steel;
-    color: white;
   }
 }
 
@@ -110,6 +131,7 @@
   color: @apos-grey30;
   line-height: 0;
   margin-left: 5px;
+  .transition();
   &.apos-first
   {
     margin-left: 0;
@@ -126,6 +148,22 @@
   {
     .apos-bg-gradient(@apos-steel, @apos-grey50);
     color: white;
+  }
+}
+
+.apos-pill--yellow
+{
+  .apos-pill-choice
+  {
+    &:hover
+    {
+      color: @apos-grey20;
+    }
+    &.apos-active
+    {
+      .apos-bg-gradient(@apos-yellow, darken(@apos-yellow, 20%));
+      color: @apos-grey10;
+    }
   }
 }
 
