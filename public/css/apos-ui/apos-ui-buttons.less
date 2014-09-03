@@ -30,6 +30,18 @@
   {
     float: right;
     margin-left: 10px;
+    .transition();
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    &.apos-busy
+    {
+      padding-left: 30px;
+      margin-left: -30px;
+      .apos-progress-btn-spinner
+      {
+        opacity: 1;
+      }
+    }
   }
   &.apos-progress-btn--base
   {
@@ -96,6 +108,20 @@
     {
       .apos-bg-gradient(@apos-orange-dark, @apos-orange-light);
       border: 1px solid @apos-base;
+    }
+  }
+  .apos-progress-btn-spinner
+  {
+    opacity: 0;
+    .transition();
+    -webkit-transition: opacity .2s ease;
+    -moz-transition: opacity .2s ease;
+    img
+    {
+      height: 17px;
+      position: absolute;
+      left: 6px;
+      top: 5px;
     }
   }
 }
