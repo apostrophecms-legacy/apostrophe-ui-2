@@ -201,9 +201,16 @@
     {
       display:block;
       padding: 5px 5px 0;
+      clear: both;
+
       input
       {
         margin-left: 0;
+        // We want the checkbox on the left here,
+        // but in other uses, the input should be on the right.
+        display: inline-block;
+        margin-right: 6px;
+
       }
       label
       {
