@@ -25,6 +25,17 @@
       vertical-align: bottom;
       padding: 188px 15px 20px 10px;
       // border-bottom: 1px solid @apos-grey60;
+
+      //Shade the active button a bit darker.
+      .active
+      {
+        background: @apos-grey40;
+        color: white;
+      }
+      .icon:before
+      {
+        padding-right: 3px;
+      }
     }
     .apos-add-files,
 
@@ -114,6 +125,7 @@
   .apos-preview-info
   {
     margin-top: 30px;
+    margin-bottom: 20px;
   }
   .apos-show-pane-container
   {
@@ -224,6 +236,9 @@
       input {
         width: auto;
       }
+      background: #fefefe;
+      border-radius: 8px;
+      border: 3px dashed #F5D1CE;
       text-align: center;
     }
     .apos-download-original a
@@ -314,7 +329,7 @@
 
   .apos-replace-file
   {
-    background: @apos-grey60 !important;
+    //background: @apos-grey60 !important;
     width: 60%;
     display: block;
     margin: 10px auto 0;
@@ -323,12 +338,13 @@
     h4
     {
       color: black;
-      text-transform: uppercase;
-      font-family: montserrat;
+      //text-transform: uppercase;
+      font-family: Cabin;
       margin-bottom: 10px;
     }
     .apos-file-input
     {
+      //.apos-ui-btn;
       position: absolute;
       top: 0;
       z-index: 10;
@@ -348,25 +364,46 @@
     }
     .apos-file-styled
     {
+      .apos-ui;
       color: white;
-      padding: 15px;
-      background-color: @apos-base;
-      opacity: 0.8;
-      height: 50px;
-      width: 150px;
-      text-align:center;
-      position: relative;
       display: inline-block;
-      font-family: montserrat;
-      text-transform: uppercase;
-      font-size: 11px;
+      min-width: 36px;
+      line-height: 14px;
 
-      &:hover
-      {
-        background-color: darken(@apos-base, 10%);
-        cursor: pointer;
-        opacity: 1;
-      }
+      margin-right: 0px;
+
+      text-shadow: 0.2em 0.1em rgba(0,0,0,0.2);
+      padding: 0.65em 1em;
+
+      text-align: center;
+      cursor: pointer;
+
+      .apos-base-grad();
+
+      border: 1px solid @apos-shade-5;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+
+
+      // color: white;
+      // padding: 15px;
+      // background-color: @apos-base;
+      // opacity: 0.8;
+      // height: 50px;
+      // width: 150px;
+      // text-align:center;
+      // position: relative;
+      // display: inline-block;
+      // font-family: montserrat;
+      // text-transform: uppercase;
+      // font-size: 11px;
+      //
+      // &:hover
+      // {
+      //   background-color: darken(@apos-base, 10%);
+      //   cursor: pointer;
+      //   opacity: 1;
+      // }
     }
     .apos-media-file-in-message
     {
@@ -532,7 +569,7 @@
       .apos-show-pane-field
       {
         clear: left;
-        margin: 8px 0;
+        padding: 8px;
         .apos-label
         {
           float: left;
@@ -550,6 +587,10 @@
         }
         .apos-label:after {
           content: ":";
+        }
+        &:nth-child(2n)
+        {
+          background: @apos-grey70;
         }
       }
     }
