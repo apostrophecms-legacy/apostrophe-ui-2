@@ -13,4 +13,7 @@ $(function(){
   $('.apos-admin-bar').on('transitionend', function(){
     if(!$(this).hasClass('collapsed')) { $(this).css('overflow', 'visible'); }
   });
+
+  $('.apos-admin-bar').draggable();
+  $('.apos-pages-menu').draggable({ axis: "x"});
 });
