@@ -1,4 +1,4 @@
-apostrophe-ui-2
-===============
 
-Styles required for the new editor and other pre-release improvements to A2's interface. Eventually this will merge into the apostrophe module.
+# THIS MODULE IS FOR 0.5.X ONLY, DEPRECATED FOR ALL NEW PROJECTS
+
+You do not need this module for your new Apostrophe project and it will not work with it. See the [apostrophe documentation](http://apostrophecms.org) for more information about Apostrophe 2.x.
