@@ -1,3 +1,7 @@
+# ⛔️ **DEPRECATED** — do not use for new projects
+
+See [our current docs](https://docs.apostrophecms.org/)
+
 
 # THIS MODULE IS FOR 0.5.X ONLY, DEPRECATED FOR ALL NEW PROJECTS
 
